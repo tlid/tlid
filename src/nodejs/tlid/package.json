@@ -1,0 +1,30 @@
+{
+  "name": "tlid",
+  "version": "1.0.0",
+  "description": "Tlid is the oldest libraries I created about 20 years ago if not more, it simply enables creating datetime based string to use mostly for efficient file naming composed of a sortable and searchable dt string",
+  "main": "tlid.js",
+  "scripts": {
+    "test": "node tests/tlid.app.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlid/tlid.git"
+  },
+  "keywords": [
+    "date",
+    "sortable",
+    "string",
+    "util",
+    "gix",
+    "tool"
+  ],
+  "author": "J. Guillaume Isabelle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlid/tlid/issues"
+  },
+  "homepage": "https://github.com/tlid/tlid#readme",
+  "dependencies": {
+    "moment": "^2.22.2"
+  }
+}
