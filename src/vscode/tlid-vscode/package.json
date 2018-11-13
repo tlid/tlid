@@ -2,7 +2,7 @@
     "name": "tlid-vscode",
     "displayName": "TlidVSCode",
     "description": "@stcgoal 1811121148 A Tlid generator for VSCode",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "guillaumeisabelle",
     "engines": {
         "vscode": "^1.28.0"
@@ -22,6 +22,7 @@
     "activationEvents": [
         "onCommand:extension.TlidGet",
         "onCommand:extension.IdugGet",
+        "onCommand:extension.TlidugGet",
         "onCommand:extension.UnIdugGet"
     ],
     "main": "./extension",

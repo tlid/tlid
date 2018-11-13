@@ -26,6 +26,9 @@ Clipboard is overwritten and need to paste (it is kind of not exactly what is de
 ## Release Notes
 
 
+### 0.0.2
+
+- Extension was not loading when installed from VSCode Marketplace
 
 ### 0.0.1
 
