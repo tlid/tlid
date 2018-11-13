@@ -1,0 +1,29 @@
+{
+  "name": "tlidug",
+  "version": "1.0.0",
+  "description": "Combine Tlid with Idug",
+  "main": "tlidug.js",
+  "scripts": {
+    "test": "tests/tlidug.app.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlid/tlid.git"
+  },
+  "keywords": [
+    "tlid",
+    "id",
+    "tool",
+    "gix"
+  ],
+  "author": "J. Guillaume Isabelle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlid/tlid/issues"
+  },
+  "homepage": "https://github.com/tlid/tlid#readme",
+  "dependencies": {
+    "idug": "^1.0.2",
+    "tlid": "^1.0.0"
+  }
+}
