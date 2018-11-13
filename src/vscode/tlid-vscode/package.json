@@ -1,0 +1,57 @@
+{
+    "name": "tlid-vscode",
+    "displayName": "TlidVSCode",
+    "description": "@stcgoal 1811121148 A Tlid generator for VSCode",
+    "version": "0.0.1",
+    "publisher": "guillaumeisabelle",
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.TlidGet",
+        "onCommand:extension.IdugGet",
+        "onCommand:extension.UnIdugGet"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.TlidGet",
+                "title": "Tlid Get to Clipboard"
+            },
+            {
+                "command": "extension.TlidugGet",
+                "title": "Tlidug Get to Clipboard"
+            },
+            {
+                "command": "extension.IdugGet",
+                "title": "Idug Get to Clipboard"
+            },
+            {
+                "command": "extension.UnIdugGet",
+                "title": "UnIdug Get to Clipboard"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "eslint": "^4.11.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "clipboardy": "^1.2.3",
+        "gixstr": "^1.0.1",
+        "idug": "^1.0.2",
+        "tlid": "^1.0.0",
+        "tlidug": "^1.0.0"
+    }
+}
