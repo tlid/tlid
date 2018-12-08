@@ -16,34 +16,89 @@ var moment = require("moment");
 // tlid.js
 // ========
 module.exports = {
-  get: function() {
+  /**
+   * Get a TLID (default is with seconds)
+   */
+  get: function () {
     return moment().format("YYMMDDHHMMSS");
   },
-  miliseconds: function() {
+  /**
+   * JSON Description Quoted only
+   */
+  json: function () {
+    return `"tlid":"${moment().format("YYMMDDHHMMSS")}"`;
+  },
+  /**
+   * JSON Object with {}
+   */
+  ojson: function () {
+    return `{"tlid":"${moment().format("YYMMDDHHMMSS")}"}`;
+  },
+  /**
+   * Miliseconds tlid
+   */
+  miliseconds: function () {
     return moment().format("YYMMDDHHMMSSmmm");
   },
-  ms: function() {
+  /**
+   * Miliseconds tlid
+   */
+  ms: function () {
     return moment().format("YYMMDDHHMMSSmmm");
   },
-  seconds: function() {
+  /**
+   * seconds tlid
+   */
+  seconds: function () {
     return moment().format("YYMMDDHHMMSS");
   },
-  minutes: function() {
+  /**
+   * minutes tlid
+   */
+  minutes: function () {
     return moment().format("YYMMDDHHMM");
   },
-  min: function() {
+  /**
+   * minutes tlid
+   */
+  min: function () {
     return moment().format("YYMMDDHHMM");
   },
-  hour: function() {
+  /**
+   * hour tlid
+   */
+  hour: function () {
     return moment().format("YYMMDDHH");
   },
-  day: function() {
+  /**
+   * day tlid
+   */
+  day: function () {
     return moment().format("YYMMDD");
   },
-  month: function() {
+  /**
+   * month tlid
+   */
+  month: function () {
     return moment().format("YYMM");
   },
-  year: function() {
+  /**
+   * year tlid
+   */
+  year: function () {
     return moment().format("YY");
+  },
+  xtr: function (str)
+  {
+    var numberPattern = /\d+/g;
+
+   return str.match(numberPattern);
   }
+  , has: function (str)
+  {
+    
+    var numberPattern = /\d+/g;
+
+   return (str.match(numberPattern) !=null);
+    }
 };
