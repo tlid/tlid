@@ -2,10 +2,10 @@
     "name": "tlid-vscode",
     "displayName": "TlidVSCode",
     "description": "@stcgoal 1811121148 A Tlid generator for VSCode",
-    "version": "0.0.2",
+    "version": "0.0.6",
     "publisher": "guillaumeisabelle",
     "engines": {
-        "vscode": "^1.28.0"
+        "vscode": "^1.14.0"
     },
     "author": "J. Guillaume Isabelle",
     "license": "MIT",
@@ -21,6 +21,8 @@
     ],
     "activationEvents": [
         "onCommand:extension.TlidGet",
+        "onCommand:extension.TlidGetJSON",
+        "onCommand:extension.TlidLineToJSON",
         "onCommand:extension.IdugGet",
         "onCommand:extension.TlidugGet",
         "onCommand:extension.UnIdugGet"
@@ -31,6 +33,14 @@
             {
                 "command": "extension.TlidGet",
                 "title": "Tlid Get to Clipboard"
+            },
+            {
+                "command": "extension.TlidLineToJSON",
+                "title": "Transform Tlid Line to JSON Object"
+            },
+            {
+                "command": "extension.TlidGetJSON",
+                "title": "Tlid JSON Get to Clipboard"
             },
             {
                 "command": "extension.TlidugGet",
@@ -59,9 +69,9 @@
     },
     "dependencies": {
         "clipboardy": "^1.2.3",
-        "gixstr": "^1.0.1",
+        "gixdeco": "0.0.0",
         "idug": "^1.0.2",
-        "tlid": "^1.0.0",
-        "tlidug": "^1.0.0"
+        "tlid": "^1.0.3",
+        "tlidug": "^1.0.2"
     }
 }

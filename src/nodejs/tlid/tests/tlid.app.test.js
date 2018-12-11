@@ -32,3 +32,9 @@ console.log(
     + ` in: "${pattern}"`
 );
 
+
+
+console.log(
+    "---- Testing XTRO-----\n" +
+    JSON.stringify(tool.xtro(pattern))
+);

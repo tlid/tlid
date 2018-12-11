@@ -1,6 +1,6 @@
 {
   "name": "tlid",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Goal: Content needs something to search for, identify in time.  ;History: Tlid is the oldest libraries I created about 20 years ago if not more, it simply enables creating datetime based string to use mostly for efficient file naming composed of a sortable and searchable dt string.",
   "main": "tlid.js",
   "scripts": {

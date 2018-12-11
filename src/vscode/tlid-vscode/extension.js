@@ -4,11 +4,13 @@ const vscode = require('vscode');
 const fs = require('fs');
 
 
-const gixstr = require('gixstr');
+
 
 var tlid = require('tlid');
 var tlidug = require('tlidug');
 var idug = require('idug');
+
+var gixdeco = require('gixdeco');
 
 const clipboardy = require('clipboardy');
 
@@ -37,6 +39,44 @@ function activate(context) {
         // The code you place here will be executed every time your command is executed
         vscode.window.showInformationMessage("Creating  Tlid...");
         var tlidValue = tlid.get();
+
+        clipboardy.writeSync(tlidValue);
+        // Display a message box to the user
+        vscode.window.showInformationMessage(tlidValue);
+    });
+
+    let disposableTlidLineToJSON = vscode.commands.registerCommand('extension.TlidLineToJSON', function () {
+        // The code you place here will be executed every time your command is executed
+        //  vscode.window.showInformationMessage("Transforming  Tlid line...");
+
+        var tlidLine = clipboardy.readSync();
+
+        var tlidValue = tlid.get();
+
+        var r =
+            gixdeco.geto(tlidLine);
+
+        try {
+            if (r['tlid'] == null)
+                r['tlid'] = tlidValue; //setting it up
+        } catch (error) {
+
+        }
+        //  if (r.tlid == null || r.tlid == "-1")
+
+
+        var out = JSON.stringify(r);
+
+        clipboardy.writeSync(out);
+        // Display a message box to the user
+        vscode.window.showInformationMessage(out);
+        //  vscode.window.showInformationMessage(tlidLine);
+    });
+
+    let disposableTlidGetJSON = vscode.commands.registerCommand('extension.TlidGetJSON', function () {
+        // The code you place here will be executed every time your command is executed
+        vscode.window.showInformationMessage("Creating JSON Tlid...");
+        var tlidValue = tlid.json();
 
         clipboardy.writeSync(tlidValue);
         // Display a message box to the user
@@ -77,9 +117,11 @@ function activate(context) {
 
 
 
+    context.subscriptions.push(disposableTlidLineToJSON);
     context.subscriptions.push(disposableUnIdugGet);
     context.subscriptions.push(disposableIdugGet);
     context.subscriptions.push(disposableTlidGet);
+    context.subscriptions.push(disposableTlidGetJSON);
     context.subscriptions.push(disposableTlidugGet);
 }
 exports.activate = activate;

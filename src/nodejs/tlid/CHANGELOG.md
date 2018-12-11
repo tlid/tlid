@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Up to date
 
+## [1.0.3] - 2018-12-09
+### Changed
+- Minor fix in output of xtro
+
+## [1.0.2] - 2018-12-09
+### Changed
+- Minor fix in output of xtro
+
 ## [1.0.1] - 2018-12-08
 ### Added
 - function xtr(str) : Extraction of tlid

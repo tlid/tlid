@@ -88,17 +88,42 @@ module.exports = {
   year: function () {
     return moment().format("YY");
   },
-  xtr: function (str)
-  {
+  /** Extract a Tlid from a String
+   * 
+   * @param {*} str 
+   */
+  xtr: function (str) {
     var numberPattern = /\d+/g;
+    try {
+      return str.match(numberPattern)[0];
 
-   return str.match(numberPattern);
-  }
-  , has: function (str)
-  {
-    
-    var numberPattern = /\d+/g;
-
-   return (str.match(numberPattern) !=null);
+    } catch (error) {
+      return "";
     }
+  },
+  /** Extract a structure from the string
+   * 
+   * @param {*} str 
+   */
+  xtro: function (str) {
+    var r = new Object();
+    r.tlid = "-1";
+    r.src = str;
+    r.txt = "";
+    // r.deco = "";
+
+    if (this.has(str)) {
+      r.tlid = this.xtr(str);
+      r.txt = str.replace(r.tlid, "")
+        .replace("@tlid ", "");
+    }
+
+    return r;
+  }
+  , has: function (str) {
+
+    var numberPattern = /\d+/g;
+
+    return (str.match(numberPattern) != null);
+  }
 };

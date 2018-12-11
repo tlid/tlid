@@ -1,6 +1,6 @@
 {
   "name": "tlidug",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Combine Tlid with Idug",
   "main": "tlidug.js",
   "scripts": {
@@ -24,6 +24,6 @@
   "homepage": "https://github.com/tlid/tlid#readme",
   "dependencies": {
     "idug": "^1.0.2",
-    "tlid": "^1.0.0"
+    "tlid": "^1.0.3"
   }
 }
