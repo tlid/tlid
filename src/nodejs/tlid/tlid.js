@@ -12,118 +12,224 @@
 */
 
 var moment = require("moment");
+/**
+  * Get a TLID (default is with seconds)
+  */
+function tlid__get() {
+  return moment().format("YYMMDDHHMMSS");
+}
+
+/**
+ * JSON Description Quoted only
+ */
+function tlid__json() {
+  return `"tlid":"${moment().format("YYMMDDHHMMSS")}"`;
+}
+
+/**
+ * JSON Object with {}
+ */
+function tlid__ojson() {
+  return `{"tlid":"${moment().format("YYMMDDHHMMSS")}"}`;
+}
+
+/**
+ * Miliseconds tlid
+ */
+function tlid__miliseconds() {
+  return moment().format("YYMMDDHHMMSSmmm");
+}
+
+/**
+  * seconds tlid
+  */
+function tlid__seconds() {
+  return moment().format("YYMMDDHHMMSS");
+}
+/**
+     * minutes tlid
+     */
+function tlid__minutes() {
+  return moment().format("YYMMDDHHMM");
+}
+
+/**
+   * hour tlid
+   */
+function tlid__hour() {
+  return moment().format("YYMMDDHH");
+}
+/**
+    * day tlid
+    */
+function tlid__day() {
+  return moment().format("YYMMDD");
+}
+
+/**
+   * month tlid
+   */function
+  tlid__month() {
+  return moment().format("YYMM");
+}
+
+/**
+  * year tlid
+  */function
+  tlid__year() {
+  return moment().format("YY");
+}
+
+/** Extract a Tlid from a String
+    * 
+    * @param {*} str 
+    */function
+  tlid__xtr(str) {
+  var numberPattern = /\d+/g;
+  try {
+    return str.match(numberPattern)[0];
+
+  } catch (error) {
+    return "";
+  }
+}
+
+
+/** Extract a structure from the string
+ * 
+ * @param {*} str 
+ */function
+  tlid__xtro(str) {
+  var r = new Object();
+  r.tlid = "-1";
+  r.src = str;
+  r.txt = "";
+  // r.deco = "";
+
+  if (tlid__has(str)) {
+    r.tlid = tlid__xtr(str);
+    r.txt = str.replace(r.tlid, "")
+      .replace("@tlid ", "");
+  }
+
+  return r;
+}
+
+
+/** Line has a tlid
+ * 
+ * @param {*} str 
+ */function
+  tlid__has(str) {
+
+  var numberPattern = /\d+/g;
+
+  return (str.match(numberPattern) != null);
+}
+
 
 // tlid.js
 // ========
-module.exports = {
-  /**
-   * Get a TLID (default is with seconds)
+try {
+  module.exports = {
+    /**
+     * Get a TLID (default is with seconds)
    */
-  get: function () {
-    return moment().format("YYMMDDHHMMSS");
-  },
-  /**
-   * JSON Description Quoted only
-   */
-  json: function () {
-    return `"tlid":"${moment().format("YYMMDDHHMMSS")}"`;
-  },
-  /**
-   * JSON Object with {}
-   */
-  ojson: function () {
-    return `{"tlid":"${moment().format("YYMMDDHHMMSS")}"}`;
-  },
-  /**
-   * Miliseconds tlid
-   */
-  miliseconds: function () {
-    return moment().format("YYMMDDHHMMSSmmm");
-  },
-  /**
-   * Miliseconds tlid
-   */
-  ms: function () {
-    return moment().format("YYMMDDHHMMSSmmm");
-  },
-  /**
-   * seconds tlid
-   */
-  seconds: function () {
-    return moment().format("YYMMDDHHMMSS");
-  },
-  /**
-   * minutes tlid
-   */
-  minutes: function () {
-    return moment().format("YYMMDDHHMM");
-  },
-  /**
-   * minutes tlid
-   */
-  min: function () {
-    return moment().format("YYMMDDHHMM");
-  },
-  /**
-   * hour tlid
-   */
-  hour: function () {
-    return moment().format("YYMMDDHH");
-  },
-  /**
-   * day tlid
-   */
-  day: function () {
-    return moment().format("YYMMDD");
-  },
-  /**
-   * month tlid
-   */
-  month: function () {
-    return moment().format("YYMM");
-  },
-  /**
-   * year tlid
-   */
-  year: function () {
-    return moment().format("YY");
-  },
-  /** Extract a Tlid from a String
-   * 
-   * @param {*} str 
-   */
-  xtr: function (str) {
-    var numberPattern = /\d+/g;
-    try {
-      return str.match(numberPattern)[0];
-
-    } catch (error) {
-      return "";
+    get: function () {
+      return tlid__get();
+    },
+    /**
+     * JSON Description Quoted only
+     */
+    json: function () {
+      return tlid__json();
+    },
+    /**
+     * JSON Object with {}
+     */
+    ojson: function () {
+      return tlid__ojson();
+    },
+    /**
+     * Miliseconds tlid
+     */
+    miliseconds: function () {
+      return tlid__miliseconds();
+    },
+    /**
+     * Miliseconds tlid
+     */
+    ms: function () {
+      return tlid__miliseconds();
+    },
+    /**
+     * seconds tlid
+     */
+    seconds: function () {
+      return tlid__seconds();
+    },
+    /**
+     * minutes tlid
+     */
+    minutes: function () {
+      return tlid__minutes();
+    },
+    /**
+     * minutes tlid
+     */
+    min: function () {
+      return tlid__minutes();
+    },
+    /**
+     * hour tlid
+     */
+    hour: function () {
+      return tlid__hour();
+    },
+    /**
+     * day tlid
+     */
+    day: function () {
+      return tlid__day();
+    },
+    /**
+     * month tlid
+     */
+    month: function () {
+      return tlid__month();
+    },
+    /**
+     * year tlid
+     */
+    year: function () {
+      return tlid__year();
+    },
+    /** Extract a Tlid from a String
+     * 
+     * @param {*} str 
+     */
+    xtr: function (str) {
+      return tlid__xtr(str);
+    },
+    /** Extract a structure from the string
+     * 
+     * @param {*} str 
+     */
+    xtro: function (str) {
+      return tlid__xtro(str);
     }
-  },
-  /** Extract a structure from the string
-   * 
-   * @param {*} str 
-   */
-  xtro: function (str) {
-    var r = new Object();
-    r.tlid = "-1";
-    r.src = str;
-    r.txt = "";
-    // r.deco = "";
+    ,
+    /** Line has a tlid
+     * 
+     * @param {*} str 
+     */
+    has: function (str) {
 
-    if (this.has(str)) {
-      r.tlid = this.xtr(str);
-      r.txt = str.replace(r.tlid, "")
-        .replace("@tlid ", "");
+      return tlid__has(str);
     }
+  };
 
-    return r;
-  }
-  , has: function (str) {
 
-    var numberPattern = /\d+/g;
+} catch (error) {
 
-    return (str.match(numberPattern) != null);
-  }
-};
+}

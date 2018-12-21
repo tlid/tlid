@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Up to date
 
+## [1.0.4] - 2018-12-20
+### Changed
+- Found ways to make browserify compatible
+
 ## [1.0.3] - 2018-12-09
 ### Changed
 - Minor fix in output of xtro
