@@ -127,6 +127,15 @@ function tlid__day() {
   return (str.match(numberPattern) != null);
 }
 
+/**  
+ * 
+ * @param {*} str 
+ */function
+  tlid__clean(str) {
+
+  var numberPattern = /\d+/g;
+  return (str.replace(numberPattern, ""));
+}
 
 // tlid.js
 // ========
@@ -210,6 +219,13 @@ try {
      */
     xtr: function (str) {
       return tlid__xtr(str);
+    },
+    /** Clean of Tlid a String
+     * 
+     * @param {*} str 
+     */
+    clean: function (str) {
+      return tlid__clean(str);
     },
     /** Extract a structure from the string
      * 

@@ -38,3 +38,8 @@ console.log(
     "---- Testing XTRO-----\n" +
     JSON.stringify(tool.xtro(pattern))
 );
+
+
+console.log("Cleared pattern : " +
+    tool.clean(pattern)
+);

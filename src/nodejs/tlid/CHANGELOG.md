@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Up to date
 
+## [1.0.5] - 2018-12-21
+### Changed
+- Added function to clear a  text of tlid
+
 ## [1.0.4] - 2018-12-20
 ### Changed
 - Found ways to make browserify compatible
