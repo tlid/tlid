@@ -43,3 +43,35 @@ console.log(
 console.log("Cleared pattern : " +
     tool.clean(pattern)
 );
+
+
+
+console.log(tool.xtro(pattern));
+
+console.log("-----todate-----" + pattern);
+
+console.log(tool.todate(pattern));
+
+pattern = "@tlid 181208 I will be done";
+
+console.log("-----todate-----" + pattern);
+
+console.log(tool.todate(pattern));
+
+pattern = "@tlid 181208182233 I will be done";
+
+console.log("-----todate-----" + pattern);
+
+console.log(tool.todate(pattern));
+
+pattern = "@tlid 18120818223344 I will be done";
+
+console.log("-----todate-----" + pattern);
+
+console.log(tool.todate(pattern));
+
+pattern = "@tlid 181208182233199 I will be done";
+
+console.log("-----todate-----" + pattern);
+
+console.log(tool.todate(pattern));

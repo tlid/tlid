@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Up to date
 
+## [1.0.7] - 2018-12-26
+### Changed
+- added .todate(tlid) function
+
+## [1.0.6] - 2018-12-26
+### Changed
+- Minor enhancements (double spaces in cleared and extracted text)
+
 ## [1.0.5] - 2018-12-21
 ### Changed
 - Added function to clear a  text of tlid
