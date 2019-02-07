@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Up to date
 
+## [1.0.8] - 2018-12-26
+### Changed
+- enhanced .todate(tlid) function to support a string as input and tlid will export Date in it.
+
 ## [1.0.7] - 2018-12-26
 ### Changed
 - added .todate(tlid) function

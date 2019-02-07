@@ -75,3 +75,9 @@ pattern = "@tlid 181208182233199 I will be done";
 console.log("-----todate-----" + pattern);
 
 console.log(tool.todate(pattern));
+
+pattern = "181208182233188";
+
+console.log("-----todate-----" + pattern);
+
+console.log(tool.todate(pattern));

@@ -29,7 +29,7 @@ function tlid__toDate(str) {
   var tlidValue = tlid__xtr(str);
   var r = "";
 
-  var y = "20" + getchk_sub(tlidValue, 0, 2);
+  var y = "20" + getchk_sub(tlidValue, 0, 2); // will bug in 82 years, well, I am not pessimistic here but possibly will not be there or if I do, I wont care so much... I must add a reminder for 2099/12/31 to update tlid.todate.... ;)
 
   var m = getchk_sub(tlidValue, 2, 4) - 1;
   var d = getchk_sub(tlidValue, 4, 6);
