@@ -5,7 +5,7 @@
   "main": "tlid.js",
   "scripts": {
     "test": "node tests/tlid.app.test.js",
-     "postinstall": "node ./postinstall.js" 
+    "postinstall": "node ./postinstall.js"
   },
   "repository": {
     "type": "git",
