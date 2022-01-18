@@ -1,6 +1,6 @@
 {
   "name": "tlid-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "TLID cli",
   "main": "tlidcli.js",
   "scripts": {
