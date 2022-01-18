@@ -1,0 +1,29 @@
+{
+  "name": "tlid-cli",
+  "version": "0.0.2",
+  "description": "TLID cli",
+  "main": "tlidcli.js",
+  "scripts": {
+    "test": "node tlidcli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tlid/tlid.git"
+  },
+  "bin": {
+    "tlid": "tlidcli.js"
+  },
+  "keywords": [
+    "tlid",
+    "giu"
+  ],
+  "author": "Guillaume Descoteaux-Isabelle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlid/tlid/issues"
+  },
+  "homepage": "https://github.com/tlid/tlid#readme",
+  "dependencies": {
+    "tlid": "^1.0.12"
+  }
+}
