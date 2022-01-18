@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/tlid/tlid/issues"
   },
-  "homepage": "https://github.com/tlid/tlid#readme",
+  "homepage": "https://github.com/tlid/tlid/tree/master/src/nodejs/tlid-cli#readme",
   "dependencies": {
     "tlid": "^1.0.12"
   }
