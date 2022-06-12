@@ -1,6 +1,6 @@
 {
   "name": "tlid-cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "TLID cli",
   "main": "tlidcli.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+ssh://git@github.com/tlid/tlid.git"
   },
   "bin": {
-    "tlid": "tlidcli.js"
+    "tlidcli": "tlidcli.js"
   },
   "keywords": [
     "tlid",
