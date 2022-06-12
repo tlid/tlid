@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/tlid/tlid/tree/master/src/nodejs/tlid-cli#readme",
   "dependencies": {
-    "tlid": "^1.0.12"
+    "tlid": "^1.0.14"
   }
 }
