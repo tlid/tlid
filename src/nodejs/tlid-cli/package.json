@@ -1,6 +1,6 @@
 {
   "name": "tlid-cli",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "TLID cli",
   "main": "tlidcli.js",
   "scripts": {
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/tlid/tlid/tree/master/src/nodejs/tlid-cli#readme",
   "dependencies": {
-    "tlid": "^1.0.14"
+    "tlid": "^1.0.16"
   }
 }
