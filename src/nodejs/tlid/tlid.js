@@ -16,7 +16,7 @@ var moment = require("moment");
   * Get a TLID (default is with seconds)
   */
 function tlid__get() {
-  return moment().format("yyMMddHHmmss");
+  return moment().format("YYMMddHHmmss");
 }
 
 
@@ -114,54 +114,54 @@ function getchk_sub(str, s, e) {
  * JSON Description Quoted only
  */
 function tlid__json() {
-  return `"tlid":"${moment().format("yyMMddHHmmss")}"`;
+  return `"tlid":"${moment().format("YYMMddHHmmss")}"`;
 }
 
 /**
  * JSON Object with {}
  */
 function tlid__ojson() {
-  return `{"tlid":"${moment().format("yyMMddHHmmss")}"}`;
+  return `{"tlid":"${moment().format("YYMMddHHmmss")}"}`;
 }
 
 /**
  * Miliseconds tlid
  */
 function tlid__miliseconds() {
-  return moment().format("yyMMddHHmmssmmm");
+  return moment().format("YYMMddHHmmssmmm");
 }
 
 /**
   * seconds tlid
   */
 function tlid__seconds() {
-  return moment().format("yyMMddHHmmss");
+  return moment().format("YYMMddHHmmss");
 }
 /**
      * minutes tlid
      */
 function tlid__minutes() {
-  return moment().format("yyMMddHHmm");
+  return moment().format("YYMMddHHmm");
 }
 
 /**
    * hour tlid
    */
 function tlid__hour() {
-  return moment().format("yyMMddHH");
+  return moment().format("YYMMddHH");
 }
 /**
     * day tlid
     */
 function tlid__day() {
-  return moment().format("yyMMdd");
+  return moment().format("YYMMdd");
 }
 
 /**
    * month tlid
    */function
   tlid__month() {
-  return moment().format("yyMM");
+  return moment().format("YYMM");
 }
 
 /**
