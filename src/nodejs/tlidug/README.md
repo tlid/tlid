@@ -15,6 +15,11 @@ var optiontlid="M"; //month
 var separator = "--";
 var v = tlidug.dashed(optiontlid,separator);
 
+var dashed=true;
+var idug = tlidug.idug(dashed);
+
+var tlidonly = tlidug.gettlid();
+
 ```
 
 

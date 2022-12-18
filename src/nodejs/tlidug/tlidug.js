@@ -1,4 +1,4 @@
-var tlid = require("tlid");
+var tlidlib = require("tlid");
 // var idug = require("idug");
 
 const { 
@@ -25,32 +25,42 @@ module.exports = {
     .replace("-","")
     .replace("-","")
     .replace("-","")
-    .replace("-","")    ;
-    
+    .replace("-","");    
     return v;
   },
-  gettlid: function(tlidoption="")  {
+  idug: function(dashed=true) {
+    var v = uuidv1();
+    if (dashed) 
+      return v;
+    else return v 
+              .replace("-","")
+              .replace("-","")
+              .replace("-","")
+              .replace("-","")
+              .replace("-","");    
+  },
+  tlid: function(tlidoption="")  {
     var t =  "0";
-    if (tlidoption == "h") t = tlid.hour();
+    if (tlidoption == "h") t = tlidlib.hour();
     else
-    if (tlidoption == "s") t = tlid.seconds();
+    if (tlidoption == "s") t = tlidlib.seconds();
     else
-    if (tlidoption == "ms") t = tlid.miliseconds();
+    if (tlidoption == "ms") t = tlidlib.miliseconds();
     else
-    if (tlidoption == "m") t = tlid.minutes();
+    if (tlidoption == "m") t = tlidlib.minutes();
     else
-    if (tlidoption == "M") t = tlid.month();
+    if (tlidoption == "M") t = tlidlib.month();
     else
-    if (tlidoption == "y") t = tlid.year();
+    if (tlidoption == "y") t = tlidlib.year();
     else
-    if (tlidoption == "d") t = tlid.day();
+    if (tlidoption == "d") t = tlidlib.day();
     else
-    t = tlid.minutes();
+    t = tlidlib.minutes();
     return t;
   },
   dashed: function(tlidoption="", separator = "__",suffix="") {
     var v = uuidv1();
-    var t = this.gettlid(tlidoption);
+    var t = this.tlid(tlidoption);
 
     var r ="";
     if (suffix == "") 
