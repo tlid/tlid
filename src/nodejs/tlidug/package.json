@@ -4,11 +4,14 @@
   "description": "Combine Tlid with Idug",
   "main": "tlidug.js",
   "scripts": {
-    "test": "tests/tlidug.app.test.js"
+    "test": "node x.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tlid/tlid.git"
+  },
+  "bin": {
+    "tlidug": "tlidugcli.js"
   },
   "keywords": [
     "tlid",
@@ -23,7 +26,7 @@
   },
   "homepage": "https://github.com/tlid/tlid#readme",
   "dependencies": {
-    "idug": "^1.0.2",
-    "tlid": "^1.0.3"
+    "tlid": "^1.0.18",
+    "uuid": "^9.0.0"
   }
 }
