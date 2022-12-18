@@ -39,5 +39,11 @@ tlidug -d
 #only tlid month
 tlidug -t M
 
+tlidug  -i -d
+##b741b0d0-7e81-11ed-be2d-9f52af0f33ec
+
+
+tlidug  -i 
+## c5fd34a07e8111ed9009b50fecfc5678
 ```
 
