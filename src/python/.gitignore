@@ -1,0 +1,4 @@
+build
+dist
+__py*__
+**/__py*__
