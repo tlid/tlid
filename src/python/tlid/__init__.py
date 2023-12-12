@@ -44,3 +44,11 @@ def to_date(tlid_str):
         return datetime.strptime(tlid_str, "%y%m%d%H%M%S%f")
     else:
         raise ValueError("Invalid TLID string length.")
+
+
+def tlid_dt_to_string(dt):
+    return dt.strftime("%y%m%d%H%M")
+def tlid_dt_to_string_day(dt):
+    return dt.strftime("%y%m%d")
+def tlid_dt_to_string_seconds(dt):
+    return dt.strftime("%y%m%d%H%M%SS")
