@@ -34,5 +34,10 @@ setup(
         'Operating System :: OS Independent',
     ],
     python_requires='>=3.6',
+        entry_points={
+        'console_scripts': [
+            'pytlid=tlid.tlidcli:main',  # Assuming your tlidcli.py has a main() function
+        ],
+    },
 )
 

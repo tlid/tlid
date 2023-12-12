@@ -41,3 +41,59 @@ print(tlid.to_date('210101010101'))  # Outputs: 2021-01-01 01:01:01
 
 ```
 
+
+
+```markdown
+# pytlid
+
+`pytlid` is a command-line interface for generating time-based identifiers using the `tlid` Python package.
+
+
+
+## Usage
+
+To use `pytlid`, simply run the command followed by the desired time unit. The default time unit is minutes if no argument is provided.
+
+```sh
+pytlid [unit]
+```
+
+Here are the available units and their corresponding outputs:
+
+- `h`: Current hour in YYMMDDHH format
+- `s`: Current seconds in YYMMDDHHMMSS format
+- `ms`: Current milliseconds in YYMMDDHHMMSSmmm format
+- `m`: Current month in YYMM format
+- `M`: Current month in YYMM format (same as `m`)
+- `y`: Current year in YY format
+- `d`: Current day in YYMMDD format
+
+### Examples
+
+To get the current time in minutes:
+
+```sh
+pytlid
+```
+
+To get the current time in hours:
+
+```sh
+pytlid h
+```
+
+To get the current time in seconds:
+
+```sh
+pytlid s
+```
+
+For help:
+
+```sh
+pytlid --help
+```
+
+This will display the help message for the `pytlid` command.
+```
+
