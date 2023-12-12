@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: tlid
-Version: 0.1.3
+Version: 0.1.4
 Summary: A utility for creating datetime-based strings for file naming
 Home-page: https://github.com/tlid/tlid/tree/master/src/python
 Author: GUillaume Isabelle

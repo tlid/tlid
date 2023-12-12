@@ -33,19 +33,19 @@ def main():
     args = parser.parse_args()
 
     # Get the TLID based on the selected unit
-    if args.unit == "h":
+    if args.unit == "h" or args.unit == "H" or args.unit == "hour":
         print(get_hour())
-    elif args.unit == "s":
+    elif args.unit == "s" or args.unit == "S" or args.unit == "seconds":
         print(get_seconds())
-    elif args.unit == "ms":
+    elif args.unit == "ms" or args.unit == "MS" or args.unit == "milliseconds":
         print(get_milliseconds())
-    elif args.unit == "m" or args.unit == "M":
+    elif args.unit == "m" or args.unit == "month":
         print(get_month())
-    elif args.unit == "y":
+    elif args.unit == "y" or args.unit == "Y" or args.unit == "year":
         print(get_year())
-    elif args.unit == "d":
+    elif args.unit == "d" or args.unit == "D" or args.unit == "day":
         print(get_day())
-    elif args.unit == "minutes":
+    elif args.unit == "minutes" or args.unit == "min" or args.unit == "MINUTES":
         print(get_minutes())
 
 
