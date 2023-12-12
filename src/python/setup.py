@@ -1,26 +1,10 @@
 # setup.py
 
-from setuptools import setup
-# setup.py
-
-
-
-# setup(
-#     name='tlid',
-#     version='0.2.0',
-#     description='Module for creating datetime-based strings for file naming.',
-#     author='jgwill',
-#     packages=['tlid'],
-#     url='https://github.com/jgwill/jgtpy',
-#     install_requires=['clid'],
-# )
-# setup.py
-
 from setuptools import setup, find_packages
 
 setup(
     name='tlid',  # This should be a unique name, not already present on PyPI
-    version='0.1.1',
+    version='0.1.2',
     author='GUillaume Isabelle',
     author_email='jgi@jgwill.com',
     description='A utility for creating datetime-based strings for file naming',
