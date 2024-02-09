@@ -42,6 +42,12 @@ def to_date(tlid_str):
         return datetime.strptime(tlid_str, "%y%m%d%H%M%S")
     elif len(tlid_str) == 15:
         return datetime.strptime(tlid_str, "%y%m%d%H%M%S%f")
+    elif len(tlid_str) == 8:
+        return datetime.strptime(tlid_str, "%y%m%d%H")
+    elif len(tlid_str) == 6:
+        return datetime.strptime(tlid_str, "%y%m%d")
+    elif len(tlid_str) == 10:
+        return datetime.strptime(tlid_str, "%Y%m%d")
     else:
         raise ValueError("Invalid TLID string length.")
 
@@ -52,3 +58,17 @@ def tlid_dt_to_string_day(dt):
     return dt.strftime("%y%m%d")
 def tlid_dt_to_string_seconds(dt):
     return dt.strftime("%y%m%d%H%M%SS")
+
+
+def formatted_from_pto(dt, fmt):
+    return dt.strftime(fmt)
+
+def strdt(dt_str):
+    formats = ["%Y-%m-%d", "%Y-%m-%d %H", "%Y-%m-%d %H:%M", "%Y-%m-%d %H:%M:%S","%y-%m-%d", "%y-%m-%d %H", "%y-%m-%d %H:%M", "%y-%m-%d %H:%M:%S","%Y/%m/%d", "%Y/%m/%d %H", "%Y/%m/%d %H:%M", "%Y/%m/%d %H:%M:%S","%y/%m/%d", "%y/%m/%d %H", "%y/%m/%d %H:%M", "%y/%m/%d %H:%M:%S","%Y-%m-%d", "%Y-%m-%d %H", "%Y-%m-%d %H%M", "%Y-%m-%d %H%M%S","%y-%m-%d", "%y-%m-%d %H", "%y-%m-%d %H%M", "%y-%m-%d %H%M%S","%Y/%m/%d", "%Y/%m/%d %H", "%Y/%m/%d %H%M", "%Y/%m/%d %H%M%S","%y/%m/%d", "%y/%m/%d %H", "%y/%m/%d %H%M", "%y/%m/%d %H%M%S"]
+    for fmt in formats:
+        try:
+            dtobj= datetime.strptime(dt_str, fmt)
+            return formatted_from_pto(dtobj, fmt.replace("-","").replace("/","").replace(":","").replace(" ",""))
+        except ValueError:
+            pass
+    raise ValueError(f"no valid date format found for {dt_str}")

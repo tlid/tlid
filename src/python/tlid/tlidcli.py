@@ -3,6 +3,12 @@
 
 import argparse
 import sys
+import os
+
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+#import tlid
+#from . import tlid
+
 from . import (
     get_minutes,
     get_hour,
@@ -11,6 +17,7 @@ from . import (
     get_month,
     get_year,
     get_day,
+    strdt,
 )
 
 
@@ -25,7 +32,7 @@ def main():
         "unit",
         nargs="?",
         default="minutes",
-        choices=["h", "s", "ms", "m", "M", "y", "d", "minutes"],
+        choices=["h", "s", "ms", "m", "M", "y", "d", "minutes","strdt"],
         help="Select the unit of time for TLID generation (default: minutes).",
     )
 
@@ -47,6 +54,8 @@ def main():
         print(get_day())
     elif args.unit == "minutes" or args.unit == "min" or args.unit == "MINUTES":
         print(get_minutes())
+    elif args.unit == "strdt" or args.unit == "dt" or args.unit == "str":
+        print(strdt(args[3]))
 
 
 # This is the standard boilerplate that calls the main() function.
