@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='tlid',  # This should be a unique name, not already present on PyPI
-    version='0.1.9',
+    version='0.1.10',
     author='GUillaume Isabelle',
     author_email='jgi@jgwill.com',
     description='A utility for creating datetime-based strings for file naming',
