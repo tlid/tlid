@@ -2,3 +2,4 @@ build
 dist
 __py*__
 **/__py*__
+tlid.egg-info
