@@ -68,7 +68,10 @@ def strdt(dt_str):
     for fmt in formats:
         try:
             dtobj= datetime.strptime(dt_str, fmt)
-            return formatted_from_pto(dtobj, fmt.replace("-","").replace("/","").replace(":","").replace(" ",""))
+            return formatted_from_pto(dtobj, fmt.replace("-","").replace("/","").replace(":","").replace(" ","").replace("Y","y"))
         except ValueError:
             pass
     raise ValueError(f"no valid date format found for {dt_str}")
+
+def fromdtstr(dt_str):
+    return strdt(dt_str)
