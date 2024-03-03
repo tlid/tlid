@@ -52,8 +52,17 @@ def to_date(tlid_str):
         raise ValueError("Invalid TLID string length.")
 
 
-def tlid_dt_to_string(dt):
-    return dt.strftime("%y%m%d%H%M")
+def tlid_dt_to_string(dt,no_seconds=True,year_two_digits=True):
+    fmt = "%y%m%d%H%M"
+    
+    if year_two_digits is False:
+        fmt="%Y%m%d%H%M"
+        
+    if no_seconds is False:
+        fmt=fmt+"%S"
+        
+    return dt.strftime(fmt)
+
 def tlid_dt_to_string_day(dt):
     return dt.strftime("%y%m%d")
 def tlid_dt_to_string_seconds(dt):
@@ -63,12 +72,21 @@ def tlid_dt_to_string_seconds(dt):
 def formatted_from_pto(dt, fmt):
     return dt.strftime(fmt)
 
-def strdt(dt_str):
+def strdt(dt_str,no_seconds=True,year_two_digits=True):
     formats = ["%Y-%m-%d", "%Y-%m-%d %H", "%Y-%m-%d %H:%M", "%Y-%m-%d %H:%M:%S","%y-%m-%d", "%y-%m-%d %H", "%y-%m-%d %H:%M", "%y-%m-%d %H:%M:%S","%Y/%m/%d", "%Y/%m/%d %H", "%Y/%m/%d %H:%M", "%Y/%m/%d %H:%M:%S","%y/%m/%d", "%y/%m/%d %H", "%y/%m/%d %H:%M", "%y/%m/%d %H:%M:%S","%Y-%m-%d", "%Y-%m-%d %H", "%Y-%m-%d %H%M", "%Y-%m-%d %H%M%S","%y-%m-%d", "%y-%m-%d %H", "%y-%m-%d %H%M", "%y-%m-%d %H%M%S","%Y/%m/%d", "%Y/%m/%d %H", "%Y/%m/%d %H%M", "%Y/%m/%d %H%M%S","%y/%m/%d", "%y/%m/%d %H", "%y/%m/%d %H%M", "%y/%m/%d %H%M%S"]
     for fmt in formats:
         try:
             dtobj= datetime.strptime(dt_str, fmt)
-            return formatted_from_pto(dtobj, fmt.replace("-","").replace("/","").replace(":","").replace(" ","").replace("Y","y"))
+            fixed_fmt = fmt.replace("-","").replace("/","").replace(":","").replace(" ","").replace("Y","y")
+            #remove seconds '2019-01-01 00:00:00' 
+            if no_seconds:
+                fixed_fmt = fixed_fmt.replace("%S","")
+            if year_two_digits:
+                fixed_fmt = fixed_fmt.replace("%Y","%y")
+            else:
+                fixed_fmt = fixed_fmt.replace("%y","%Y")
+            result=formatted_from_pto(dtobj, fixed_fmt)
+            return result
         except ValueError:
             pass
     raise ValueError(f"no valid date format found for {dt_str}")
