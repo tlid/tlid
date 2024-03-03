@@ -91,5 +91,5 @@ def strdt(dt_str,no_seconds=True,year_two_digits=True):
             pass
     raise ValueError(f"no valid date format found for {dt_str}")
 
-def fromdtstr(dt_str):
-    return strdt(dt_str)
+def fromdtstr(dt_str,no_seconds=True,year_two_digits=True):
+    return strdt(dt_str,no_seconds,year_two_digits)
