@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='tlid',  # This should be a unique name, not already present on PyPI
-    version='0.1.14',
+    version='0.1.15',
     author='GUillaume Isabelle',
     author_email='jgi@jgwill.com',
     description='A utility for creating datetime-based strings for file naming',
@@ -13,7 +13,7 @@ setup(
     url='https://github.com/tlid/tlid/tree/master/src/python',  # Replace with the actual URL
     packages=find_packages(),
     classifiers=[
-        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 2',
         'License :: OSI Approved :: MIT License',  # If your project is licensed under MIT
         'Operating System :: OS Independent',
     ],
