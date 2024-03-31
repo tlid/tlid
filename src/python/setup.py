@@ -17,7 +17,7 @@ setup(
         'License :: OSI Approved :: MIT License',  # If your project is licensed under MIT
         'Operating System :: OS Independent',
     ],
-    python_requires='>=3.6',
+    python_requires='>=2.7',
         entry_points={
         'console_scripts': [
             'pytlid=tlid.tlidcli:main',  # Assuming your tlidcli.py has a main() function
