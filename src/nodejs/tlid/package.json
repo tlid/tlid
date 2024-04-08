@@ -5,8 +5,8 @@
   "main": "tlid.js",
   "scripts": {
     "test": "node tests/tlid.app.test.js",
-    "prepublish": "copy ../tlid-cli/tlidcli.js .",
-    "publish-cli": "cd;cp ../tlid-cli/tlidcli.js .;git commit $_ -m publish;npm version patcgh;npm publish",
+    "prepublish_": "copy ../tlid-cli/tlidcli.js .",
+    "publish-cli_": "cd;cp ../tlid-cli/tlidcli.js .;git commit $_ -m publish;npm version patcgh;npm publish",
     "postinstall": "node ./postinstall.js"
   },
   "bin": {
@@ -31,6 +31,6 @@
   },
   "homepage": "https://github.com/tlid/tlid#readme",
   "dependencies": {
-    "moment": "^2.22.2"
+    "moment": "^2.30.1"
   }
 }
