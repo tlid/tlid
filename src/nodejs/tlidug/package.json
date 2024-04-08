@@ -27,6 +27,6 @@
   "homepage": "https://github.com/tlid/tlid#readme",
   "dependencies": {
     "tlid": "^1.0.18",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.1"
   }
 }
