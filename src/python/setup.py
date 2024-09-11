@@ -4,10 +4,10 @@ from setuptools import setup, find_packages
 
 setup(
     name='tlid',  # This should be a unique name, not already present on PyPI
-    version='0.1.15',
+    version='0.1.16',
     author='GUillaume Isabelle',
     author_email='jgi@jgwill.com',
-    description='A utility for creating datetime-based strings for file naming',
+    description='A utility for creating datetime-based strings for file naming in timeline.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/tlid/tlid/tree/master/src/python',  # Replace with the actual URL
