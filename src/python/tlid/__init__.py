@@ -3,7 +3,8 @@
 from datetime import datetime
 
 def get_tlid():
-    return datetime.now().strftime("%y%m%d%H%M%S")
+    fmt = "%y%m%d%H%M%S"
+    return datetime.now().strftime(fmt)
 
 def get_milliseconds():
     return datetime.now().strftime("%y%m%d%H%M%S%f")[:-3]
@@ -40,16 +41,19 @@ def clean_tlid(string):
 def to_date(tlid_str):
     if len(tlid_str) == 12:
         return datetime.strptime(tlid_str, "%y%m%d%H%M%S")
-    elif len(tlid_str) == 15:
+    elif len(tlid_str) > 12:
         return datetime.strptime(tlid_str, "%y%m%d%H%M%S%f")
     elif len(tlid_str) == 8:
         return datetime.strptime(tlid_str, "%y%m%d%H")
     elif len(tlid_str) == 6:
         return datetime.strptime(tlid_str, "%y%m%d")
     elif len(tlid_str) == 10:
-        return datetime.strptime(tlid_str, "%Y%m%d")
+        return datetime.strptime(tlid_str, "%y%m%d%H%M")
+    elif len(tlid_str) == 4:
+        return datetime.strptime(tlid_str, "%y%m")
     else:
         raise ValueError("Invalid TLID string length.")
+
 
 
 def tlid_dt_to_string(dt,no_seconds=True,year_two_digits=True):
