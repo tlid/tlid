@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='tlid',  # This should be a unique name, not already present on PyPI
-    version='0.1.16',
+    version='0.1.17',
     author='GUillaume Isabelle',
     author_email='jgi@jgwill.com',
     description='A utility for creating datetime-based strings for file naming in timeline.',
@@ -21,6 +21,7 @@ setup(
         entry_points={
         'console_scripts': [
             'pytlid=tlid.tlidcli:main',  # Assuming your tlidcli.py has a main() function
+            'tlidpy=tlid.tlidcli:main',  # Assuming your tlidcli.py has a main() function
         ],
     },
 )
